@@ -30,9 +30,9 @@ function _header($title) {
         <nav class="navtop">
             <div>
                 <h1>Vote online</h1>
-                <a href="index.php"><i class="fas fa-poll-h"></i>make your polls</a>
-                <a href="public.php"><i class="fas fa-poll-h"></i>public votes room</a>
-                </div>
+                <a href="register.php"><i class="fas fa-pen-fancy"></i>register</a>
+                <a href="login.php"><i class="fas fa-key"></i>login</a>
+            </div>
         </nav>
     EOT;
     }

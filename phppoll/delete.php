@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
             // Output msg
             $msg = 'You have deleted the poll!';
         } else {
-            // User clicked the "No" button, redirect them back to the home/index page
+            // User clicked the "No" button, redirect them back to the main page
             header('Location: index.php');
             exit;
         }

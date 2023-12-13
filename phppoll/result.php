@@ -4,14 +4,14 @@ include 'functions.php';
 $pdo = pdo_connect_mysql();
 
 if (isset($_GET['id'])) {
-    // MySQL query that selects the poll records by the GET request "id"
+    
     $stmt = $pdo->prepare('SELECT * FROM polls WHERE id = ?');
     $stmt->execute([ $_GET['id'] ]);
     
     $poll = $stmt->fetch(PDO::FETCH_ASSOC);
     // Check if the poll record exists with the id specified
     if ($poll) {
-        // MySQL Query that will get all the answers from the "poll_answers" table ordered by the number of votes (descending)
+        
         $stmt = $pdo->prepare('SELECT * FROM poll_answers WHERE poll_id = ? ORDER BY votes DESC');
         $stmt->execute([ $_GET['id'] ]);
         
